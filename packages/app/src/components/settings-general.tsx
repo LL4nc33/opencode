@@ -386,6 +386,18 @@ export const SettingsGeneral: Component = () => {
             />
           </div>
         </SettingsRow>
+
+        <SettingsRow
+          title={language.t("settings.general.row.showContextUsageBar.title")}
+          description={language.t("settings.general.row.showContextUsageBar.description")}
+        >
+          <div data-action="settings-show-context-usage-bar">
+            <Switch
+              checked={settings.general.showContextUsageBar()}
+              onChange={(checked) => settings.general.setShowContextUsageBar(checked)}
+            />
+          </div>
+        </SettingsRow>
       </SettingsList>
     </div>
   )
